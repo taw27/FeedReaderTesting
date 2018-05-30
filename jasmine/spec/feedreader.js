@@ -54,23 +54,34 @@ $(function() {
 
     /* TODO: Write a new test suite named "The menu" */
     describe("The menu", function(){
-
+        const htmlBod= document.querySelector("body");
         /* test that ensures the menu element is
          * hidden by default
          */
-
         it("has menu hidden by default", function(){
-            expect(document.querySelector("body").className).toEqual("menu-hidden");
+            expect(htmlBod.className).toEqual("menu-hidden");
+        });
+
+         /*  test that ensures the menu changes
+          * visibility when the menu icon is clicked. This test
+          * should have two expectations: does the menu display when
+          * clicked and does it hide when clicked again.
+          */
+        it("Should toggle",function(){
+            let menuIcon = document.querySelector('.menu-icon-link');
+            menuIcon.click();
+            // expect(menuIcon.click).toHaveBeenCalled();
+            expect(htmlBod.className).not.toEqual("menu-hidden");
+            menuIcon.click();
+            // expect(menuIcon.click).toHaveBeenCalled();
+            // expect(htmlBod.classList.toggle).toHaveBeenCalled();
+            expect(htmlBod.className).toEqual("menu-hidden");
         });
     });
 
         
 
-         /* TODO: Write a test that ensures the menu changes
-          * visibility when the menu icon is clicked. This test
-          * should have two expectations: does the menu display when
-          * clicked and does it hide when clicked again.
-          */
+         
 
     /* TODO: Write a new test suite named "Initial Entries" */
 

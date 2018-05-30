@@ -79,11 +79,26 @@ $(function() {
         });
     });
 
+     /*test suite named "Initial Entries" */
+
+    describe("Initial Entries",function(){
+
+        beforeEach(function(done){
+            loadFeed(0,function(){
+                done();
+            });
+        });
+
+        it("showl have atleast 1 entrie", function(done){
+            expect(document.querySelector(".feed").childElementCount).toBeGreaterThan(0);
+            done();
+        });
+    });
         
 
          
 
-    /* TODO: Write a new test suite named "Initial Entries" */
+   
 
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least

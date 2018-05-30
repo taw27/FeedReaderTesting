@@ -51,13 +51,13 @@ $(function() {
 
     /* TODO: Write a new test suite named "The menu" */
     describe("The menu", function(){
-        const htmlBod= document.querySelector("body");
+        const htmlBod= $("body");
 
         /* test that ensures the menu element is
          * hidden by default
          */
         it("has menu hidden by default", function(){
-            expect(htmlBod.className).toEqual("menu-hidden"); 
+            expect(htmlBod.hasClass("menu-hidden")).toBe(true); 
         });
 
          /*  test that ensures the menu changes
@@ -69,9 +69,9 @@ $(function() {
             let menuIcon = document.querySelector('.menu-icon-link'); //saves pointer to the menu
             
             menuIcon.click(); //clicks the menu icon to make it visible
-            expect(htmlBod.className).not.toEqual("menu-hidden"); //checks to see if menu is visible
+            expect(htmlBod.hasClass("menu-hidden")).not.toBe(true); //checks to see if menu is visible
             menuIcon.click(); //clicks the menu icon to hide it again
-            expect(htmlBod.className).toEqual("menu-hidden"); //checks if menu is actually hidden
+            expect(htmlBod.hasClass("menu-hidden")).toBe(true);  //checks if menu is actually hidden
         });
     });
 

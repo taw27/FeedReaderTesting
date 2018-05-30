@@ -11,10 +11,10 @@
 In this project I was given the task of writing test suites using Jasmine for a feed reader app, which was already provided to me by Udacity. The initial state of the project already included [Jasmine](http://jasmine.github.io/) and one test suite. The remaining tests I performed are noted [below](#tests-performed) 
 
 ## Viewing Instructions
-
-1. Visit <https://taw27.github.io/FeedReaderTesting/>
-2. Scroll down until you see Jasmine
-3. See the successful test suites that were performed 
+1. Download the project
+2. Open index.html
+3. Scroll down until you see Jasmine
+4. See the successful test suites that were performed 
 
 ## Tests Performed
 
